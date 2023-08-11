@@ -19,7 +19,7 @@ Adding the CSS class "job-listing" to a table provides some nice styling, courte
 Construct a table for each job, with one job field per row.-->
 
     <table class="job-listing" th:each="job: ${jobs}">
-        <thead>
+        <tbody>
         <tr>
             <th>ID</th>
             <td th:text="${job.id}"></td>
@@ -44,7 +44,7 @@ Construct a table for each job, with one job field per row.-->
             <th>Skill</th>
             <td th:text="${job.coreCompetency}"></td>
         </tr>
-        </thead>
+        </tbody>
     </table>
 
 
