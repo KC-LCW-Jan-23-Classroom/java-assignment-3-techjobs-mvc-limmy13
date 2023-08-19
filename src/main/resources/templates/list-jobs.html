@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org/">
-<head th:replace="fragments :: head">
-</head>
+<head th:replace="fragments :: head"></head>
 <body>
 
 <div th:replace="fragments :: page-header"></div>
@@ -18,41 +17,9 @@ Be sure to check in ListController to find the variable names available to the t
 Adding the CSS class "job-listing" to a table provides some nice styling, courtesy of Carly’s work!
 Construct a table for each job, with one job field per row.-->
 
-    <table class="job-listing" th:each="job: ${jobs}">
-
-        <tr>
-            <td>ID</td>
-            <td th:text="${job.id}"></td>
-        </tr>
-        <tr>
-            <td>Name</td>
-            <td th:text="${job.name}"></td>
-        </tr>
-        <tr>
-            <td>Employer</td>
-            <td th:text="${job.employer}"></td>
-        </tr>
-        <tr>
-            <td>Location</td>
-            <td th:text="${job.location}"></td>
-        </tr>
-        <tr>
-            <td>Position Type</td>
-            <td th:text="${job.positionType}"></td>
-        </tr>
-        <tr>
-            <td>Skill</td>
-            <td th:text="${job.coreCompetency}"></td>
-        </tr>
-
-    </table>
-
-
-
-
+    <div th:replace="fragments :: allJobs"></div>
 
 
 </div>
-
 </body>
 </html>
